@@ -1,15 +1,15 @@
-"use strict";
-exports.__esModule = true;
 //import expree module
-var express = require("express");
-var app = express();
+import * as express from "express";
+
+let app:any= express();
 //app object used to devloped the  rest services
 //ex.get,post,put,delete................................................................
+
 //get request
-app.get("/", function (req, res) {
-    res.status(200).json({ "message": "welcome to type script node js" });
+app.get("/",(req:any,res:any):any=>{
+    res.status(200).json({"message":"welcome to type script node js"})
 });
 //asign the port no
-app.listen(8080, function () {
+app.listen(8080,()=>{
     console.log("server started sucess fully!!1");
 });
